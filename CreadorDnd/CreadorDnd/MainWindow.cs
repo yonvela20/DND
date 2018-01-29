@@ -52,6 +52,15 @@ public partial class MainWindow : Gtk.Window
 			}
 		};
 
+
+		/*
+        comboBoxRaza.Changed += delegate {
+        	comboBoxRaza.GetActiveIter(out TreeIter, treeIter);
+        	object id = comboBoxRaza.Model.GetValue(treeIter, 0);
+        	image.Pixbuf = new Gdk.Pixbuf.("image" + id + ".png");
+         };
+        */
+
 	}
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)

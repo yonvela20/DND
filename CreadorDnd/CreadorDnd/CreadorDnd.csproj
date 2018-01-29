@@ -54,6 +54,12 @@
     <Reference Include="CSerpisAd">
       <HintPath>..\..\..\ad\CSerpisAd\CSerpisAd\bin\Debug\CSerpisAd.dll</HintPath>
     </Reference>
+    <Reference Include="CSerpisAd">
+      <HintPath>..\..\..\..\..\ad\CSerpisAd\CSerpisAd\bin\Debug\CSerpisAd.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Projects\mysql\MySql.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
