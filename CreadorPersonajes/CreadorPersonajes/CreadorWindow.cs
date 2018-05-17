@@ -33,6 +33,10 @@ namespace CreadorPersonajes
 				CreadorDao.Save(personaje);
 				Destroy();
 			};
+
+			buttonDados.Clicked += delegate {
+				new DadosWindow();
+			};
 		}
 	}
 }

@@ -24,10 +24,9 @@ namespace CreadorPersonajes
 				new CreadorWindow(personaje);
 			};
 
-			//Se actualiza solo 
-			//refreshAction.Activated += delegate { 
-			//	TreeViewHelper.Fill(treeView, CreadorDao.SelectAll);
-			//};
+			refreshAction.Activated += delegate { 
+				TreeViewHelper.Fill(treeView, CreadorDao.SelectAll);
+			};
 
 			deleteAction.Activated += delegate
 			{

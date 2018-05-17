@@ -46,6 +46,8 @@ namespace CreadorPersonajes
 
 		private global::Gtk.SpinButton spinButtonSab;
 
+		private global::Gtk.Button buttonDados;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -275,13 +277,24 @@ namespace CreadorPersonajes
 			w19.Position = 1;
 			w19.Expand = false;
 			w19.Fill = false;
+			// Container child vbox3.Gtk.Box+BoxChild
+			this.buttonDados = new global::Gtk.Button();
+			this.buttonDados.CanFocus = true;
+			this.buttonDados.Name = "buttonDados";
+			this.buttonDados.UseUnderline = true;
+			this.buttonDados.Label = global::Mono.Unix.Catalog.GetString("Ventana de los dados");
+			this.vbox3.Add(this.buttonDados);
+			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.buttonDados]));
+			w20.Position = 2;
+			w20.Expand = false;
+			w20.Fill = false;
 			this.Add(this.vbox3);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 433;
-			this.DefaultHeight = 354;
+			this.DefaultHeight = 383;
 			this.Show();
 		}
 	}

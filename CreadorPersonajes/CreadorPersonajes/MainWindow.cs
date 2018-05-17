@@ -26,14 +26,21 @@ public partial class MainWindow : Gtk.Window
 			new CreadorWindow(personaje);
 		};
 
-		findAction.Activated += delegate
+		//findAction.Activated += delegate
+		//{
+		//	new VisorWindow();
+		//};
+
+		buttonView.Clicked += delegate
 		{
 			new VisorWindow();
 		};
 
-		buttonDados.Clicked += delegate {
-			new DadosWindow();
-		};
+		//El boton de los dados esta puesto en la ventana de creacion para que sea mas intuitivo
+		//Aqui se pondra otra ventana para los dados
+		//buttonDados.Clicked += delegate {
+		//	new DadosWindow();
+		//};
 }
 	protected void OnDeleteEvent(object sender, DeleteEventArgs a)
 	{
