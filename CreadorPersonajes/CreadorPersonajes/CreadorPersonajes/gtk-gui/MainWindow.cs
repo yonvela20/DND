@@ -15,6 +15,8 @@ public partial class MainWindow
 
 	private global::Gtk.Table table1;
 
+	private global::Gtk.Button buttonDados;
+
 	private global::Gtk.ComboBox comboBoxRaza;
 
 	private global::Gtk.Image image;
@@ -55,27 +57,39 @@ public partial class MainWindow
 		this.table1.RowSpacing = ((uint)(6));
 		this.table1.ColumnSpacing = ((uint)(6));
 		// Container child table1.Gtk.Table+TableChild
+		this.buttonDados = new global::Gtk.Button();
+		this.buttonDados.CanFocus = true;
+		this.buttonDados.Name = "buttonDados";
+		this.buttonDados.UseUnderline = true;
+		this.buttonDados.Label = global::Mono.Unix.Catalog.GetString("Dados");
+		this.table1.Add(this.buttonDados);
+		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1[this.buttonDados]));
+		w3.XOptions = ((global::Gtk.AttachOptions)(4));
+		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table1.Gtk.Table+TableChild
 		this.comboBoxRaza = global::Gtk.ComboBox.NewText();
 		this.comboBoxRaza.Name = "comboBoxRaza";
 		this.table1.Add(this.comboBoxRaza);
-		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1[this.comboBoxRaza]));
-		w3.TopAttach = ((uint)(1));
-		w3.BottomAttach = ((uint)(2));
-		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1[this.comboBoxRaza]));
+		w4.TopAttach = ((uint)(1));
+		w4.BottomAttach = ((uint)(2));
+		w4.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
 		this.image = new global::Gtk.Image();
 		this.image.Name = "image";
 		this.table1.Add(this.image);
-		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1[this.image]));
-		w4.TopAttach = ((uint)(1));
-		w4.BottomAttach = ((uint)(2));
-		w4.LeftAttach = ((uint)(1));
-		w4.RightAttach = ((uint)(2));
-		w4.XOptions = ((global::Gtk.AttachOptions)(6));
-		w4.YOptions = ((global::Gtk.AttachOptions)(4));
+		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1[this.image]));
+		w5.TopAttach = ((uint)(2));
+		w5.BottomAttach = ((uint)(3));
+		w5.LeftAttach = ((uint)(1));
+		w5.RightAttach = ((uint)(2));
+		w5.XOptions = ((global::Gtk.AttachOptions)(4));
+		w5.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.vbox2.Add(this.table1);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.table1]));
-		w5.Position = 1;
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.table1]));
+		w6.Position = 1;
+		w6.Expand = false;
+		w6.Fill = false;
 		this.Add(this.vbox2);
 		if ((this.Child != null))
 		{

@@ -14,11 +14,11 @@ public partial class MainWindow : Gtk.Window
 		App.Instance.Connection = new MySqlConnection("server=localhost;database=dnd;user=root;password=administrador");
 		App.Instance.Connection.Open();
 
-		//image.Pixbuf = new Gdk.Pixbuf("Elfo.png");
-		//comboBoxRaza.Changed += delegate
-		//{
-		//	image.Pixbuf = new Gdk.Pixbuf(comboBoxRaza.ActiveText + ".png");
-		//};
+		image.Pixbuf = new Gdk.Pixbuf("Elfo.png");
+		comboBoxRaza.Changed += delegate
+		{
+			image.Pixbuf = new Gdk.Pixbuf(comboBoxRaza.ActiveText + ".png");
+		};
 
 		newAction.Activated += delegate
 		{
@@ -26,11 +26,15 @@ public partial class MainWindow : Gtk.Window
 			new CreadorWindow(personaje);
 		};
 
-		findAction.Activated += delegate {
+		findAction.Activated += delegate
+		{
 			new VisorWindow();
 		};
-	}
 
+		buttonDados.Clicked += delegate {
+			new DadosWindow();
+		};
+}
 	protected void OnDeleteEvent(object sender, DeleteEventArgs a)
 	{
 		Application.Quit();
