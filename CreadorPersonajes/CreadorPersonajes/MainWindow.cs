@@ -26,11 +26,6 @@ public partial class MainWindow : Gtk.Window
 			new CreadorWindow(personaje);
 		};
 
-		//findAction.Activated += delegate
-		//{
-		//	new VisorWindow();
-		//};
-
 		buttonView.Clicked += delegate
 		{
 			new VisorWindow();

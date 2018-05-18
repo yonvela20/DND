@@ -34,7 +34,6 @@
             <property name="ShowArrow">False</property>
             <node name="toolbar1" type="Toolbar">
               <node type="Toolitem" action="newAction" />
-              <node type="Toolitem" action="findAction" />
             </node>
           </widget>
           <packing>
@@ -109,7 +108,13 @@
               <widget class="Gtk.ComboBox" id="comboBoxRaza">
                 <property name="MemberName" />
                 <property name="IsTextCombo">True</property>
-                <property name="Items" translatable="yes" />
+                <property name="Items" translatable="yes">Elfo
+Enano
+Gnomo
+Mediano
+Orco
+Semielfo</property>
+                <property name="Active">0</property>
               </widget>
               <packing>
                 <property name="TopAttach">2</property>
@@ -223,7 +228,14 @@
               <widget class="Gtk.ComboBox" id="comboBoxRazaDos">
                 <property name="MemberName" />
                 <property name="IsTextCombo">True</property>
-                <property name="Items" translatable="yes" />
+                <property name="Items" translatable="yes">Elfo
+Enano
+Gnomo
+Humano
+Mediano
+Orco
+Semielfo</property>
+                <property name="Active">0</property>
               </widget>
               <packing>
                 <property name="TopAttach">1</property>

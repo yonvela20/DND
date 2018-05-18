@@ -18,7 +18,7 @@ namespace CreadorPersonajes
 			spinButtonSab.Value = (int)personaje.Sabiduria;
 			spinButtonCar.Value = (int)personaje.Carisma;
 
-			ComboBoxHelper.Fill(comboBoxRazaDos, "select id, nombre from personaje order by nombre", personaje.Raza);
+			//ComboBoxHelper.Fill(comboBoxRazaDos, "select id, nombre from personaje order by nombre", personaje.Raza);
 
 			saveAction.Activated += delegate
 			{
@@ -29,7 +29,8 @@ namespace CreadorPersonajes
 				personaje.Inteligencia = (int)spinButtonInt.Value;
 				personaje.Sabiduria = (int)spinButtonSab.Value;
 				personaje.Carisma = (int)spinButtonCar.Value;
-				//personaje.Raza = long.Parse(comboBoxCategoria.Text);
+				//personaje.Raza = long.Parse(comboBoxRazaDos.Text);
+				personaje.Raza = comboBoxRazaDos.ActiveText;
 				CreadorDao.Save(personaje);
 				Destroy();
 			};

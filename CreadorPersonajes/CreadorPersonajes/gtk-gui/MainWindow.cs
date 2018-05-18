@@ -43,8 +43,8 @@ public partial class MainWindow
 		this.vbox2.Name = "vbox2";
 		this.vbox2.Spacing = 6;
 		// Container child vbox2.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString("<ui><toolbar name=\'toolbar1\'><toolitem name=\'newAction\' action=\'newAction\'/><tool" +
-				"item name=\'findAction\' action=\'findAction\'/></toolbar></ui>");
+		this.UIManager.AddUiFromString("<ui><toolbar name=\'toolbar1\'><toolitem name=\'newAction\' action=\'newAction\'/></too" +
+				"lbar></ui>");
 		this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget("/toolbar1")));
 		this.toolbar1.Name = "toolbar1";
 		this.toolbar1.ShowArrow = false;
@@ -82,7 +82,14 @@ public partial class MainWindow
 		w4.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
 		this.comboBoxRaza = global::Gtk.ComboBox.NewText();
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Elfo"));
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Enano"));
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Gnomo"));
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Mediano"));
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Orco"));
+		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Semielfo"));
 		this.comboBoxRaza.Name = "comboBoxRaza";
+		this.comboBoxRaza.Active = 0;
 		this.table1.Add(this.comboBoxRaza);
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1[this.comboBoxRaza]));
 		w5.TopAttach = ((uint)(2));

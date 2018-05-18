@@ -17,6 +17,7 @@ namespace CreadorPersonajes
 			dataReader.Read();//TODO tratamiento de excepciones
 
 			string nombre = (string)dataReader["nombre"];
+			string raza = (string)dataReader["raza"];
 			int fuerza = (int)dataReader["fuerza"];
 			int destreza = (int)dataReader["destreza"];
 			int constitucion = (int)dataReader["constitucion"];
@@ -24,11 +25,9 @@ namespace CreadorPersonajes
 			int carisma = (int)dataReader["carisma"];
 			int sabiduria = (int)dataReader["sabiduria"];
 
-
-
-			int raza = dataReader["raza"] is DBNull ? 0
-				: (int)dataReader["raza"];
+			//Hay que cerrar el dataReader si no te da una excepción a la hora de hacer el update
 			dataReader.Close();
+
 			Creador personaje = new Creador();
 			personaje.Id = Convert.ToInt64(id);
 			personaje.Nombre = nombre;
@@ -65,9 +64,8 @@ namespace CreadorPersonajes
 			DbCommandHelper.AddParameter(dbCommand, "carisma", personaje.Carisma);
 			DbCommandHelper.AddParameter(dbCommand, "sabiduria", personaje.Sabiduria);
 
-
 			object raza = personaje.Raza;
-			if (personaje.Raza == 0)
+			if (personaje.Raza == " ")
 			{
 				personaje = null;
 			}
@@ -80,7 +78,8 @@ namespace CreadorPersonajes
 			dbCommand.CommandText = "update personaje set nombre = @nombre, raza = @raza, fuerza = @fuerza, destreza = @destreza, constitucion = @constitucion, inteligencia = @inteligencia, carisma = @carisma, sabiduria = @sabiduria where id = @id ";
 			DbCommandHelper.AddParameter(dbCommand, "nombre", personaje.Nombre);
 			DbCommandHelper.AddParameter(dbCommand, "raza", personaje.Raza);
-
+			//Linea añadida
+			DbCommandHelper.AddParameter(dbCommand, "id", personaje.Id);
 			DbCommandHelper.AddParameter(dbCommand, "fuerza", personaje.Fuerza);
 			DbCommandHelper.AddParameter(dbCommand, "destreza", personaje.Destreza);
 			DbCommandHelper.AddParameter(dbCommand, "constitucion", personaje.Constitucion);
@@ -89,7 +88,7 @@ namespace CreadorPersonajes
 			DbCommandHelper.AddParameter(dbCommand, "sabiduria", personaje.Sabiduria);
 
 			object raza = personaje.Raza;
-			if (personaje.Raza == 0)
+			if (personaje.Raza == " ")
 			{
 				personaje = null;
 			}

@@ -3,9 +3,11 @@ namespace CreadorPersonajes
 {
 	public class Creador
 	{
+
+		//He cambiado Raza por un string antes era un int 
 		private long id;
 		private String nombre = "";
-		private int raza;
+		private String raza = "";
 		private int fuerza;
 		private int destreza;
 		private int constitución;
@@ -25,7 +27,7 @@ namespace CreadorPersonajes
 			set { nombre = value; }
 		}
 
-		public int Raza
+		public String Raza
 		{
 			get { return raza; }
 			set { raza = value; }

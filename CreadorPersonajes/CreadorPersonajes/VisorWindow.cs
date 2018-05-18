@@ -17,6 +17,15 @@ namespace CreadorPersonajes
 
 			TreeViewHelper.Fill(treeView, CreadorDao.SelectAll);
 
+			editAction.Sensitive = false;
+			deleteAction.Sensitive = false;
+
+			treeView.Selection.Changed += delegate {
+				bool hasSelected = treeView.Selection.CountSelectedRows() > 0;
+				deleteAction.Sensitive = hasSelected;
+				editAction.Sensitive = hasSelected;
+			};
+
 			editAction.Activated += delegate
 			{
 				object id = TreeViewHelper.GetId(treeView);
