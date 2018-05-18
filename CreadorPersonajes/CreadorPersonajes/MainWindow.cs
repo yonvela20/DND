@@ -14,7 +14,10 @@ public partial class MainWindow : Gtk.Window
 		App.Instance.Connection = new MySqlConnection("server=localhost;database=dnd;user=root;password=administrador");
 		App.Instance.Connection.Open();
 
+		imageTitulo.Pixbuf = new Gdk.Pixbuf("dnd.png");
+
 		image.Pixbuf = new Gdk.Pixbuf("Elfo.png");
+
 		comboBoxRaza.Changed += delegate
 		{
 			image.Pixbuf = new Gdk.Pixbuf(comboBoxRaza.ActiveText + ".png");
@@ -33,9 +36,9 @@ public partial class MainWindow : Gtk.Window
 
 		//El boton de los dados esta puesto en la ventana de creacion para que sea mas intuitivo
 		//Aqui se pondra otra ventana para los dados
-		//buttonDados.Clicked += delegate {
-		//	new DadosWindow();
-		//};
+		buttonDados.Clicked += delegate {
+			new seleccionDadosWindow();
+		};
 }
 	protected void OnDeleteEvent(object sender, DeleteEventArgs a)
 	{

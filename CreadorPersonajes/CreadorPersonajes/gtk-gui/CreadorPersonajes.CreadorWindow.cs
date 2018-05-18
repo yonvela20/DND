@@ -191,7 +191,7 @@ namespace CreadorPersonajes
 			w12.XOptions = ((global::Gtk.AttachOptions)(4));
 			w12.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonCar = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonCar = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonCar.CanFocus = true;
 			this.spinButtonCar.Name = "spinButtonCar";
 			this.spinButtonCar.Adjustment.PageIncrement = 10D;
@@ -206,7 +206,7 @@ namespace CreadorPersonajes
 			w13.XOptions = ((global::Gtk.AttachOptions)(4));
 			w13.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonCon = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonCon = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonCon.CanFocus = true;
 			this.spinButtonCon.Name = "spinButtonCon";
 			this.spinButtonCon.Adjustment.PageIncrement = 10D;
@@ -221,7 +221,7 @@ namespace CreadorPersonajes
 			w14.XOptions = ((global::Gtk.AttachOptions)(4));
 			w14.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonDes = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonDes = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonDes.CanFocus = true;
 			this.spinButtonDes.Name = "spinButtonDes";
 			this.spinButtonDes.Adjustment.PageIncrement = 10D;
@@ -236,7 +236,7 @@ namespace CreadorPersonajes
 			w15.XOptions = ((global::Gtk.AttachOptions)(4));
 			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonFue = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonFue = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonFue.CanFocus = true;
 			this.spinButtonFue.Name = "spinButtonFue";
 			this.spinButtonFue.Adjustment.PageIncrement = 10D;
@@ -251,7 +251,7 @@ namespace CreadorPersonajes
 			w16.XOptions = ((global::Gtk.AttachOptions)(4));
 			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonInt = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonInt = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonInt.CanFocus = true;
 			this.spinButtonInt.Name = "spinButtonInt";
 			this.spinButtonInt.Adjustment.PageIncrement = 10D;
@@ -266,7 +266,7 @@ namespace CreadorPersonajes
 			w17.XOptions = ((global::Gtk.AttachOptions)(4));
 			w17.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
-			this.spinButtonSab = new global::Gtk.SpinButton(0D, 100D, 1D);
+			this.spinButtonSab = new global::Gtk.SpinButton(0D, 250D, 1D);
 			this.spinButtonSab.CanFocus = true;
 			this.spinButtonSab.Name = "spinButtonSab";
 			this.spinButtonSab.Adjustment.PageIncrement = 10D;

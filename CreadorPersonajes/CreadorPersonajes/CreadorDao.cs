@@ -14,7 +14,7 @@ namespace CreadorPersonajes
 			dbCommand.CommandText = "select * from personaje where id = @id";
 			DbCommandHelper.AddParameter(dbCommand, "id", id);
 			IDataReader dataReader = dbCommand.ExecuteReader();
-			dataReader.Read();//TODO tratamiento de excepciones
+			dataReader.Read();
 
 			string nombre = (string)dataReader["nombre"];
 			string raza = (string)dataReader["raza"];
@@ -22,11 +22,8 @@ namespace CreadorPersonajes
 			int destreza = (int)dataReader["destreza"];
 			int constitucion = (int)dataReader["constitucion"];
 			int inteligencia = (int)dataReader["inteligencia"];
-			int carisma = (int)dataReader["carisma"];
 			int sabiduria = (int)dataReader["sabiduria"];
-
-			//Hay que cerrar el dataReader si no te da una excepción a la hora de hacer el update
-			dataReader.Close();
+			int carisma = (int)dataReader["carisma"];
 
 			Creador personaje = new Creador();
 			personaje.Id = Convert.ToInt64(id);
@@ -36,8 +33,11 @@ namespace CreadorPersonajes
 			personaje.Destreza = destreza;
 			personaje.Constitucion = constitucion;
 			personaje.Inteligencia = inteligencia;
-			personaje.Carisma = carisma;
 			personaje.Sabiduria = sabiduria;
+			personaje.Carisma = carisma;
+
+			dataReader.Close();
+
 			return personaje;
 		}
 
@@ -53,7 +53,7 @@ namespace CreadorPersonajes
 		{
 			IDbCommand dbCommand = App.Instance.Connection.CreateCommand();
 			dbCommand.CommandText =
-				"insert into personaje (nombre, raza, fuerza, destreza, constitucion, inteligencia, carisma, sabiduria) values (@nombre, @raza, @fuerza, @destreza, @constitucion, @inteligencia, @carisma, @sabiduria)";
+				"insert into personaje (nombre, raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma) values (@nombre, @raza, @fuerza, @destreza, @constitucion, @inteligencia, @sabiduria, @carisma)";
 			DbCommandHelper.AddParameter(dbCommand, "nombre", personaje.Nombre);
 			DbCommandHelper.AddParameter(dbCommand, "raza", personaje.Raza);
 
@@ -61,14 +61,9 @@ namespace CreadorPersonajes
 			DbCommandHelper.AddParameter(dbCommand, "destreza", personaje.Destreza);
 			DbCommandHelper.AddParameter(dbCommand, "constitucion", personaje.Constitucion);
 			DbCommandHelper.AddParameter(dbCommand, "inteligencia", personaje.Inteligencia);
-			DbCommandHelper.AddParameter(dbCommand, "carisma", personaje.Carisma);
 			DbCommandHelper.AddParameter(dbCommand, "sabiduria", personaje.Sabiduria);
+			DbCommandHelper.AddParameter(dbCommand, "carisma", personaje.Carisma);
 
-			object raza = personaje.Raza;
-			if (personaje.Raza == " ")
-			{
-				personaje = null;
-			}
 			dbCommand.ExecuteNonQuery();
 		}
 
@@ -78,7 +73,6 @@ namespace CreadorPersonajes
 			dbCommand.CommandText = "update personaje set nombre = @nombre, raza = @raza, fuerza = @fuerza, destreza = @destreza, constitucion = @constitucion, inteligencia = @inteligencia, carisma = @carisma, sabiduria = @sabiduria where id = @id ";
 			DbCommandHelper.AddParameter(dbCommand, "nombre", personaje.Nombre);
 			DbCommandHelper.AddParameter(dbCommand, "raza", personaje.Raza);
-			//Linea añadida
 			DbCommandHelper.AddParameter(dbCommand, "id", personaje.Id);
 			DbCommandHelper.AddParameter(dbCommand, "fuerza", personaje.Fuerza);
 			DbCommandHelper.AddParameter(dbCommand, "destreza", personaje.Destreza);
@@ -87,11 +81,6 @@ namespace CreadorPersonajes
 			DbCommandHelper.AddParameter(dbCommand, "carisma", personaje.Carisma);
 			DbCommandHelper.AddParameter(dbCommand, "sabiduria", personaje.Sabiduria);
 
-			object raza = personaje.Raza;
-			if (personaje.Raza == " ")
-			{
-				personaje = null;
-			}
 			dbCommand.ExecuteNonQuery();
 		}
 

@@ -74,6 +74,8 @@
     <Compile Include="gtk-gui\CreadorPersonajes.VisorWindow.cs" />
     <Compile Include="DadosWindow.cs" />
     <Compile Include="gtk-gui\CreadorPersonajes.DadosWindow.cs" />
+    <Compile Include="seleccionDadosWindow.cs" />
+    <Compile Include="gtk-gui\CreadorPersonajes.seleccionDadosWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
