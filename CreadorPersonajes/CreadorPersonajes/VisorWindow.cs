@@ -12,9 +12,6 @@ namespace CreadorPersonajes
 		{
 			this.Build();
 
-			App.Instance.Connection = new MySqlConnection("server=localhost;database=dnd;user=root;password=administrador");
-			App.Instance.Connection.Open();
-
 			TreeViewHelper.Fill(treeView, CreadorDao.SelectAll);
 
 			editAction.Sensitive = false;
