@@ -10,6 +10,8 @@ namespace CreadorPersonajes
 		{
 			this.Build();
 
+
+
 			entryNombre.Text = personaje.Nombre;
 			spinButtonFue.Value = (int)personaje.Fuerza;
 			spinButtonDes.Value = (int)personaje.Destreza;
@@ -17,6 +19,23 @@ namespace CreadorPersonajes
 			spinButtonInt.Value = (int)personaje.Inteligencia;
 			spinButtonSab.Value = (int)personaje.Sabiduria;
 			spinButtonCar.Value = (int)personaje.Carisma;
+
+			//Por el moemento voy a hacer que la raza no pueda modificarse una vez creado el personaje
+			//Hay que hacer que salga por defecto un valor
+			if (personaje.Id > 0)
+			{
+				//comboBoxRazaDos.CanDefault = true;
+				comboBoxRazaDos.AppendText(personaje.Raza);
+			}
+			else { 
+				comboBoxRazaDos.AppendText("Elfo");
+				comboBoxRazaDos.AppendText("Enano");
+				comboBoxRazaDos.AppendText("Gnomo");
+				comboBoxRazaDos.AppendText("Humano");
+				comboBoxRazaDos.AppendText("Mediano");
+				comboBoxRazaDos.AppendText("Orco");
+				comboBoxRazaDos.AppendText("Semielfo");
+			}
 
 			saveAction.Activated += delegate
 			{

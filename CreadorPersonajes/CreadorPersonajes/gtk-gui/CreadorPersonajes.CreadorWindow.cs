@@ -83,15 +83,7 @@ namespace CreadorPersonajes
 			this.table2.ColumnSpacing = ((uint)(6));
 			// Container child table2.Gtk.Table+TableChild
 			this.comboBoxRazaDos = global::Gtk.ComboBox.NewText();
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Elfo"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Enano"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Gnomo"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Humano"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Mediano"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Orco"));
-			this.comboBoxRazaDos.AppendText(global::Mono.Unix.Catalog.GetString("Semielfo"));
 			this.comboBoxRazaDos.Name = "comboBoxRazaDos";
-			this.comboBoxRazaDos.Active = 0;
 			this.table2.Add(this.comboBoxRazaDos);
 			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table2[this.comboBoxRazaDos]));
 			w3.TopAttach = ((uint)(1));
