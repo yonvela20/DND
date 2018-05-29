@@ -24,10 +24,10 @@ namespace CreadorPersonajes
 			//Hay que hacer que salga por defecto un valor
 			if (personaje.Id > 0)
 			{
-				//comboBoxRazaDos.CanDefault = true;
 				comboBoxRazaDos.AppendText(personaje.Raza);
+				comboBoxRazaDos.Active = 0;
 			}
-			else { 
+			else {
 				comboBoxRazaDos.AppendText("Elfo");
 				comboBoxRazaDos.AppendText("Enano");
 				comboBoxRazaDos.AppendText("Gnomo");
@@ -35,6 +35,7 @@ namespace CreadorPersonajes
 				comboBoxRazaDos.AppendText("Mediano");
 				comboBoxRazaDos.AppendText("Orco");
 				comboBoxRazaDos.AppendText("Semielfo");
+				comboBoxRazaDos.Active = 0;
 			}
 
 			saveAction.Activated += delegate
