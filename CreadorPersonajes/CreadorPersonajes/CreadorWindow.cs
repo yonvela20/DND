@@ -10,7 +10,12 @@ namespace CreadorPersonajes
 		{
 			this.Build();
 
+			//image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText+".png");
 
+			//comboBoxRazaDos.Changed += delegate
+			//{
+			//	image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText + ".png");
+			//};
 
 			entryNombre.Text = personaje.Nombre;
 			spinButtonFue.Value = (int)personaje.Fuerza;
