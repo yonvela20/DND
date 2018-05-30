@@ -23,7 +23,7 @@ public partial class MainWindow : Gtk.Window
 			image.Pixbuf = new Gdk.Pixbuf(comboBoxRaza.ActiveText + ".png");
 		};
 
-		newAction.Activated += delegate
+		buttonNuevo.Clicked += delegate
 		{
 			Creador personaje = new Creador();
 			new CreadorWindow(personaje);

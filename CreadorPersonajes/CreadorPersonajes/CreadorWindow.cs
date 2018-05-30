@@ -10,12 +10,10 @@ namespace CreadorPersonajes
 		{
 			this.Build();
 
-			//image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText+".png");
-
-			//comboBoxRazaDos.Changed += delegate
-			//{
-			//	image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText + ".png");
-			//};
+			comboBoxRazaDos.Changed += delegate
+			{
+				image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText + ".png");
+			};
 
 			entryNombre.Text = personaje.Nombre;
 			spinButtonFue.Value = (int)personaje.Fuerza;
@@ -25,13 +23,12 @@ namespace CreadorPersonajes
 			spinButtonSab.Value = (int)personaje.Sabiduria;
 			spinButtonCar.Value = (int)personaje.Carisma;
 
-			//Por el moemento voy a hacer que la raza no pueda modificarse una vez creado el personaje
-			//Hay que hacer que salga por defecto un valor
 			if (personaje.Id > 0)
 			{
 				comboBoxRazaDos.AppendText(personaje.Raza);
 				comboBoxRazaDos.Active = 0;
 			}
+
 			else {
 				comboBoxRazaDos.AppendText("Elfo");
 				comboBoxRazaDos.AppendText("Enano");
