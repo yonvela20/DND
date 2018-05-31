@@ -79,7 +79,7 @@ namespace CreadorPersonajes
 			w2.Expand = false;
 			w2.Fill = false;
 			// Container child vbox3.Gtk.Box+BoxChild
-			this.table2 = new global::Gtk.Table(((uint)(9)), ((uint)(3)), false);
+			this.table2 = new global::Gtk.Table(((uint)(10)), ((uint)(3)), false);
 			this.table2.Name = "table2";
 			this.table2.RowSpacing = ((uint)(6));
 			this.table2.ColumnSpacing = ((uint)(6));
@@ -93,7 +93,7 @@ namespace CreadorPersonajes
 			w3.LeftAttach = ((uint)(1));
 			w3.RightAttach = ((uint)(2));
 			w3.XOptions = ((global::Gtk.AttachOptions)(4));
-			w3.YOptions = ((global::Gtk.AttachOptions)(4));
+			w3.YOptions = ((global::Gtk.AttachOptions)(0));
 			// Container child table2.Gtk.Table+TableChild
 			this.entryNombre = new global::Gtk.Entry();
 			this.entryNombre.CanFocus = true;
@@ -114,7 +114,7 @@ namespace CreadorPersonajes
 			this.table2.Add(this.image);
 			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table2[this.image]));
 			w5.TopAttach = ((uint)(1));
-			w5.BottomAttach = ((uint)(8));
+			w5.BottomAttach = ((uint)(10));
 			w5.LeftAttach = ((uint)(2));
 			w5.RightAttach = ((uint)(3));
 			w5.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -308,8 +308,8 @@ namespace CreadorPersonajes
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 433;
-			this.DefaultHeight = 387;
+			this.DefaultWidth = 485;
+			this.DefaultHeight = 457;
 			this.Show();
 		}
 	}
