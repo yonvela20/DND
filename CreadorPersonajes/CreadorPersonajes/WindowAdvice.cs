@@ -19,6 +19,7 @@ namespace CreadorPersonajes
 			messageDialog.Title = parent.Title;
 			ResponseType response = (ResponseType)messageDialog.Run();
 
+			messageDialog.Destroy();
 			return response == ResponseType.Ok;
 		}
 	}
