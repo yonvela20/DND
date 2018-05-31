@@ -11,6 +11,7 @@ namespace CreadorPersonajes
 		public VisorWindow() : base(Gtk.WindowType.Toplevel)
 		{
 			this.Build();
+			Title = "visualización de personajes";
 
 			TreeViewHelper.Fill(treeView, CreadorDao.SelectAll);
 

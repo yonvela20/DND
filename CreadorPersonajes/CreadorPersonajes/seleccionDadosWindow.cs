@@ -8,6 +8,7 @@ namespace CreadorPersonajes
 		public seleccionDadosWindow() :	base(Gtk.WindowType.Toplevel)
 		{
 			this.Build();
+			Title = "Dados";
 			Random rnd = new Random();
 			SoundPlayer sonido = new SoundPlayer("dados.wav");
 			sonido.SoundLocation = "dados.wav";

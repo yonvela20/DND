@@ -63,6 +63,7 @@ namespace CreadorPersonajes
 			this.Name = "CreadorPersonajes.CreadorWindow";
 			this.Title = global::Mono.Unix.Catalog.GetString("CreadorWindow");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.Resizable = false;
 			// Container child CreadorPersonajes.CreadorWindow.Gtk.Container+ContainerChild
 			this.vbox3 = new global::Gtk.VBox();
 			this.vbox3.Name = "vbox3";

@@ -9,7 +9,6 @@ namespace CreadorPersonajes
 		public CreadorWindow(Creador personaje) : base(Gtk.WindowType.Toplevel)
 		{
 			this.Build();
-
 			comboBoxRazaDos.Changed += delegate
 			{
 				image.Pixbuf = new Gdk.Pixbuf(comboBoxRazaDos.ActiveText + ".png");
@@ -25,11 +24,15 @@ namespace CreadorPersonajes
 
 			if (personaje.Id > 0)
 			{
+				Title = "Editor de personaje";
 				comboBoxRazaDos.AppendText(personaje.Raza);
 				comboBoxRazaDos.Active = 0;
+				entryNombre.Sensitive = false;
+				comboBoxRazaDos.Sensitive = false;
 			}
 
 			else {
+				Title = "Creador";
 				comboBoxRazaDos.AppendText("Elfo");
 				comboBoxRazaDos.AppendText("Enano");
 				comboBoxRazaDos.AppendText("Gnomo");
@@ -39,6 +42,7 @@ namespace CreadorPersonajes
 				comboBoxRazaDos.AppendText("Semielfo");
 				comboBoxRazaDos.Active = 0;
 			}
+
 
 			saveAction.Activated += delegate
 			{
@@ -50,8 +54,15 @@ namespace CreadorPersonajes
 				personaje.Inteligencia = (int)spinButtonInt.Value;
 				personaje.Sabiduria = (int)spinButtonSab.Value;
 				personaje.Carisma = (int)spinButtonCar.Value;
-				CreadorDao.Save(personaje);
-				Destroy();
+
+				if (entryNombre.Text == "")
+				{
+					WindowAdvice.Warning(this, "Debes introducir un nombre válido");
+				}
+				else { 
+					CreadorDao.Save(personaje);
+					Destroy();
+				}
 			};
 
 			buttonDados.Clicked += delegate {

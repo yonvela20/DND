@@ -6,7 +6,7 @@ namespace CreadorPersonajes
 		public DadosWindow() :	base(Gtk.WindowType.Toplevel)
 		{
 			this.Build();
-
+			Title = "Asistente de creador";
 			Random rnd = new Random();
 
 			//Resultados de los dados

@@ -44,6 +44,7 @@ public partial class MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.Resizable = false;
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.vbox2 = new global::Gtk.VBox();
 		this.vbox2.Name = "vbox2";
@@ -74,8 +75,9 @@ public partial class MainWindow
 		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1[this.buttonDados]));
 		w3.TopAttach = ((uint)(3));
 		w3.BottomAttach = ((uint)(4));
+		w3.XPadding = ((uint)(20));
 		w3.XOptions = ((global::Gtk.AttachOptions)(4));
-		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		w3.YOptions = ((global::Gtk.AttachOptions)(2));
 		// Container child table1.Gtk.Table+TableChild
 		this.buttonNuevo = new global::Gtk.Button();
 		this.buttonNuevo.CanFocus = true;
@@ -86,8 +88,9 @@ public partial class MainWindow
 		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1[this.buttonNuevo]));
 		w4.TopAttach = ((uint)(2));
 		w4.BottomAttach = ((uint)(3));
+		w4.XPadding = ((uint)(20));
 		w4.XOptions = ((global::Gtk.AttachOptions)(4));
-		w4.YOptions = ((global::Gtk.AttachOptions)(4));
+		w4.YOptions = ((global::Gtk.AttachOptions)(2));
 		// Container child table1.Gtk.Table+TableChild
 		this.buttonView = new global::Gtk.Button();
 		this.buttonView.CanFocus = true;
@@ -96,10 +99,11 @@ public partial class MainWindow
 		this.buttonView.Label = global::Mono.Unix.Catalog.GetString("Visualizar personajes");
 		this.table1.Add(this.buttonView);
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1[this.buttonView]));
-		w5.TopAttach = ((uint)(1));
-		w5.BottomAttach = ((uint)(2));
+		w5.TopAttach = ((uint)(4));
+		w5.BottomAttach = ((uint)(5));
+		w5.XPadding = ((uint)(20));
 		w5.XOptions = ((global::Gtk.AttachOptions)(4));
-		w5.YOptions = ((global::Gtk.AttachOptions)(4));
+		w5.YOptions = ((global::Gtk.AttachOptions)(2));
 		// Container child table1.Gtk.Table+TableChild
 		this.comboBoxRaza = global::Gtk.ComboBox.NewText();
 		this.comboBoxRaza.AppendText(global::Mono.Unix.Catalog.GetString("Elfo"));
@@ -112,18 +116,21 @@ public partial class MainWindow
 		this.comboBoxRaza.Active = 0;
 		this.table1.Add(this.comboBoxRaza);
 		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1[this.comboBoxRaza]));
-		w6.TopAttach = ((uint)(4));
-		w6.BottomAttach = ((uint)(5));
-		w6.YOptions = ((global::Gtk.AttachOptions)(4));
+		w6.TopAttach = ((uint)(1));
+		w6.BottomAttach = ((uint)(2));
+		w6.XPadding = ((uint)(20));
+		w6.XOptions = ((global::Gtk.AttachOptions)(4));
+		w6.YOptions = ((global::Gtk.AttachOptions)(2));
 		// Container child table1.Gtk.Table+TableChild
 		this.image = new global::Gtk.Image();
 		this.image.Name = "image";
 		this.table1.Add(this.image);
 		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1[this.image]));
-		w7.TopAttach = ((uint)(5));
-		w7.BottomAttach = ((uint)(6));
+		w7.TopAttach = ((uint)(1));
+		w7.BottomAttach = ((uint)(5));
 		w7.LeftAttach = ((uint)(1));
 		w7.RightAttach = ((uint)(2));
+		w7.YPadding = ((uint)(20));
 		w7.XOptions = ((global::Gtk.AttachOptions)(4));
 		w7.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
@@ -136,6 +143,7 @@ public partial class MainWindow
 		this.imageTitulo.Name = "imageTitulo";
 		this.table3.Add(this.imageTitulo);
 		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table3[this.imageTitulo]));
+		w8.XPadding = ((uint)(20));
 		w8.XOptions = ((global::Gtk.AttachOptions)(4));
 		w8.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.table1.Add(this.table3);
@@ -145,8 +153,6 @@ public partial class MainWindow
 		this.vbox2.Add(this.table1);
 		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.table1]));
 		w10.Position = 1;
-		w10.Expand = false;
-		w10.Fill = false;
 		this.Add(this.vbox2);
 		if ((this.Child != null))
 		{

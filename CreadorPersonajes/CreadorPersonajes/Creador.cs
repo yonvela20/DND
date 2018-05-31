@@ -67,4 +67,5 @@ namespace CreadorPersonajes
 			set { carisma = value; }
 		}
 	}
+
 }

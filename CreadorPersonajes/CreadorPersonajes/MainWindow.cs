@@ -34,8 +34,6 @@ public partial class MainWindow : Gtk.Window
 			new VisorWindow();
 		};
 
-		//El boton de los dados esta puesto en la ventana de creacion para que sea mas intuitivo
-		//Aqui se pondra otra ventana para los dados
 		buttonDados.Clicked += delegate {
 			new seleccionDadosWindow();
 		};
