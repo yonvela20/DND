@@ -298,7 +298,7 @@ namespace CreadorPersonajes
 			this.buttonDados.CanFocus = true;
 			this.buttonDados.Name = "buttonDados";
 			this.buttonDados.UseUnderline = true;
-			this.buttonDados.Label = global::Mono.Unix.Catalog.GetString("Ventana de los dados");
+			this.buttonDados.Label = global::Mono.Unix.Catalog.GetString("Asistente");
 			this.vbox3.Add(this.buttonDados);
 			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.buttonDados]));
 			w21.Position = 2;

@@ -23,7 +23,6 @@
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
-    <property name="Resizable">False</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.VBox" id="vbox2">
@@ -137,6 +136,7 @@
                 <property name="Items" translatable="yes">Elfo
 Enano
 Gnomo
+Humano
 Mediano
 Orco
 Semielfo</property>
@@ -666,7 +666,7 @@ Semielfo</property>
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Ventana de los dados</property>
+            <property name="Label" translatable="yes">Asistente</property>
             <property name="UseUnderline">True</property>
           </widget>
           <packing>
@@ -1177,9 +1177,6 @@ Semielfo</property>
               <placeholder />
             </child>
             <child>
-              <placeholder />
-            </child>
-            <child>
               <widget class="Gtk.Label" id="label10">
                 <property name="MemberName" />
                 <property name="LabelProp" translatable="yes">Valor 1</property>
@@ -1187,6 +1184,8 @@ Semielfo</property>
               <packing>
                 <property name="LeftAttach">1</property>
                 <property name="RightAttach">2</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1208,6 +1207,8 @@ Semielfo</property>
                 <property name="BottomAttach">2</property>
                 <property name="LeftAttach">1</property>
                 <property name="RightAttach">2</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1229,6 +1230,8 @@ Semielfo</property>
                 <property name="BottomAttach">3</property>
                 <property name="LeftAttach">1</property>
                 <property name="RightAttach">2</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1248,6 +1251,8 @@ Semielfo</property>
               <packing>
                 <property name="LeftAttach">4</property>
                 <property name="RightAttach">5</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1269,6 +1274,8 @@ Semielfo</property>
                 <property name="BottomAttach">2</property>
                 <property name="LeftAttach">4</property>
                 <property name="RightAttach">5</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1290,6 +1297,8 @@ Semielfo</property>
                 <property name="BottomAttach">3</property>
                 <property name="LeftAttach">4</property>
                 <property name="RightAttach">5</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>
@@ -1412,6 +1421,26 @@ Semielfo</property>
               <packing>
                 <property name="LeftAttach">2</property>
                 <property name="RightAttach">3</property>
+                <property name="AutoSize">True</property>
+                <property name="XOptions">Fill</property>
+                <property name="YOptions">Fill</property>
+                <property name="XExpand">False</property>
+                <property name="XFill">True</property>
+                <property name="XShrink">False</property>
+                <property name="YExpand">False</property>
+                <property name="YFill">True</property>
+                <property name="YShrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Label" id="valorar">
+                <property name="MemberName" />
+              </widget>
+              <packing>
+                <property name="LeftAttach">6</property>
+                <property name="RightAttach">7</property>
+                <property name="XPadding">15</property>
+                <property name="YPadding">15</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>

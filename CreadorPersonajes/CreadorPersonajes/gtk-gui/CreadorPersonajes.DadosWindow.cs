@@ -64,6 +64,8 @@ namespace CreadorPersonajes
 
 		private global::Gtk.Label labelValorUno;
 
+		private global::Gtk.Label valorar;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -274,6 +276,8 @@ namespace CreadorPersonajes
 			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.table2[this.label10]));
 			w17.LeftAttach = ((uint)(1));
 			w17.RightAttach = ((uint)(2));
+			w17.XPadding = ((uint)(15));
+			w17.YPadding = ((uint)(15));
 			w17.XOptions = ((global::Gtk.AttachOptions)(4));
 			w17.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -286,6 +290,8 @@ namespace CreadorPersonajes
 			w18.BottomAttach = ((uint)(2));
 			w18.LeftAttach = ((uint)(1));
 			w18.RightAttach = ((uint)(2));
+			w18.XPadding = ((uint)(15));
+			w18.YPadding = ((uint)(15));
 			w18.XOptions = ((global::Gtk.AttachOptions)(4));
 			w18.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -298,6 +304,8 @@ namespace CreadorPersonajes
 			w19.BottomAttach = ((uint)(3));
 			w19.LeftAttach = ((uint)(1));
 			w19.RightAttach = ((uint)(2));
+			w19.XPadding = ((uint)(15));
+			w19.YPadding = ((uint)(15));
 			w19.XOptions = ((global::Gtk.AttachOptions)(4));
 			w19.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -308,6 +316,8 @@ namespace CreadorPersonajes
 			global::Gtk.Table.TableChild w20 = ((global::Gtk.Table.TableChild)(this.table2[this.label13]));
 			w20.LeftAttach = ((uint)(4));
 			w20.RightAttach = ((uint)(5));
+			w20.XPadding = ((uint)(15));
+			w20.YPadding = ((uint)(15));
 			w20.XOptions = ((global::Gtk.AttachOptions)(4));
 			w20.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -320,6 +330,8 @@ namespace CreadorPersonajes
 			w21.BottomAttach = ((uint)(2));
 			w21.LeftAttach = ((uint)(4));
 			w21.RightAttach = ((uint)(5));
+			w21.XPadding = ((uint)(15));
+			w21.YPadding = ((uint)(15));
 			w21.XOptions = ((global::Gtk.AttachOptions)(4));
 			w21.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -332,6 +344,8 @@ namespace CreadorPersonajes
 			w22.BottomAttach = ((uint)(3));
 			w22.LeftAttach = ((uint)(4));
 			w22.RightAttach = ((uint)(5));
+			w22.XPadding = ((uint)(15));
+			w22.YPadding = ((uint)(15));
 			w22.XOptions = ((global::Gtk.AttachOptions)(4));
 			w22.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table2.Gtk.Table+TableChild
@@ -402,9 +416,20 @@ namespace CreadorPersonajes
 			w28.RightAttach = ((uint)(3));
 			w28.XOptions = ((global::Gtk.AttachOptions)(4));
 			w28.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child table2.Gtk.Table+TableChild
+			this.valorar = new global::Gtk.Label();
+			this.valorar.Name = "valorar";
+			this.table2.Add(this.valorar);
+			global::Gtk.Table.TableChild w29 = ((global::Gtk.Table.TableChild)(this.table2[this.valorar]));
+			w29.LeftAttach = ((uint)(6));
+			w29.RightAttach = ((uint)(7));
+			w29.XPadding = ((uint)(15));
+			w29.YPadding = ((uint)(15));
+			w29.XOptions = ((global::Gtk.AttachOptions)(4));
+			w29.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.vbox1.Add(this.table2);
-			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.table2]));
-			w29.Position = 1;
+			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.table2]));
+			w30.Position = 1;
 			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{

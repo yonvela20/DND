@@ -57,8 +57,7 @@ namespace CreadorPersonajes
 
 				if (entryNombre.Text == "")
 				{
-					WindowAdvice.Warning(this, "Debes introducir un nombre válido");
-					//WindowHelper.Warning(this, "Debes introducir un nombre válido");
+					WindowHelper.Warning(this, "Debes introducir un nombre válido");
 				}
 				else { 
 					CreadorDao.Save(personaje);

@@ -60,33 +60,6 @@ namespace CreadorPersonajes
 				resultadoTextoCuatro = resultadoCuatro.ToString();
 				labelResultadoCuatro.Text = resultadoTextoCuatro;
 
-				//Determinamos que valor es el que no se utiliza
-				//Si tenemos la casualidad de tener más de un valor igual se utilizan todos
-
-				//if (resultadoUno < resultadoDos && resultadoUno < resultadoTres
-				//	&& resultadoUno < resultadoCuatro)
-				//{
-				//	validoUno.Text = "Este valor se descarta";
-
-				//}
-				//else if (resultadoDos < resultadoUno && resultadoDos < resultadoTres
-				//	&& resultadoDos < resultadoCuatro)
-				//{
-				//	validoDos.Text = "Este valor se descarta";
-				//}
-				//else if (resultadoTres < resultadoUno && resultadoTres < resultadoDos
-				//	&& resultadoTres < resultadoCuatro)
-				//{
-				//	validoTres.Text = "Este valor se descarta";
-				//}
-				//else if (resultadoCuatro < resultadoUno && resultadoCuatro < resultadoDos
-				//	&& resultadoCuatro < resultadoTres)
-				//{
-				//	validoCuatro.Text = "Este valor se descarta";
-				//}
-
-				//Visualizacion de los valores obtenidos (Hay que hacer que se reste el valor más pequeño)
-				//TODO Hacer que el menor resultado no esté en la suma
 				if (contador == 1)
 				{
 					valorUno = resultadoUno + resultadoDos + resultadoTres + resultadoCuatro;

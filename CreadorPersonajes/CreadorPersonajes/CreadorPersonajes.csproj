@@ -48,11 +48,11 @@
     </Reference>
     <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System.Data" />
-    <Reference Include="CSerpisAd">
-      <HintPath>..\..\CSerpisAd\CSerpisAd\bin\Debug\CSerpisAd.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\mysql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="CSerpisAd">
+      <HintPath>..\..\CSerpisAd\CSerpisAd\bin\Debug\CSerpisAd.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +76,6 @@
     <Compile Include="gtk-gui\CreadorPersonajes.DadosWindow.cs" />
     <Compile Include="seleccionDadosWindow.cs" />
     <Compile Include="gtk-gui\CreadorPersonajes.seleccionDadosWindow.cs" />
-    <Compile Include="WindowAdvice.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
